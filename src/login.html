@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Ingresa tus credenciales de acceso</title>
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+        <!-- Compressed CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+    </head>
+    <body>
+
+        <form>
+            <div class="grid-container">
+              <div class="grid-x grid-padding-x">
+
+                <div class="medium-6 cell">
+                  <label>RUN:
+                    <input type="text" id="rut" placeholder="12345678-9">
+                  </label>
+                </div>
+
+                <div class="medium-6 cell">
+                  <label>Clave Secreta:
+                    <input type="text" id="password" placeholder="Ingresa tu clave secreta">
+                  </label>
+                </div>
+
+              </div>
+            </div>
+
+            <button id="credenciales" class="button small" href="#">Guardar Credenciales</button>
+          </form>
+
+          <script src="login.js"></script>
+    </body>
+</html>
