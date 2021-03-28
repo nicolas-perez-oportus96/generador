@@ -10,10 +10,9 @@ const saveCredenciales = (usuario, contrasena) => {
         usuario: usuario,
         contrasena: contrasena
     }
-    const credenciales = getConnection().get('credenciales').push(credenciales);
-    console.log(credenciales)
-
-}
+    
+    getConnection().get('credenciales').push(credenciales).write();
+};
 
 module.exports = {
     getCredenciales,

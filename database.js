@@ -1,19 +1,20 @@
-const low = require('lowdb');
-const FileAsync = require('lowdb/adapters/FileAsync');
+const low = require('lowdb')
+const FileSync = require('lowdb/adapters/FileSync')
 
-let db;
+const adapter = new FileSync('db.json')
+const db = low(adapter)
 
-async function createConnection(){
-    const adapter = new FileAsync('db.json');
-    db = await low(adapter);
-    db.defaults({
-        credenciales: {
-            usuario: String,
-            password: String
-        }
-    }).write();
+// Set some defaults (required if your JSON file is empty)
+db.defaults({credenciales: {}}).write()
+
+function getDatosUsuario(usuario,contrasena){
+    const datos = db.get('credenciales').value();
+    return datos;
 }
 
-const getConnection = () => db;
+function postDatosUsuario(usuario,contrasena){
+    db.set('credenciales.usuario', usuario).write();
+    db.set('credenciales.contrasena', contrasena).write();
+}
 
-module.exports = { createConnection, getConnection }
+module.exports = {getDatosUsuario, postDatosUsuario}

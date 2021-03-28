@@ -1,8 +1,6 @@
 const {BrowserWindow, app, Menu} = require('electron');
-const {createConnection} = require('./database')
 const { ipcMain } = require('electron')
-
-createConnection();
+require('./database');
 let mainWindow;
 let addWindow;
 
@@ -17,7 +15,7 @@ function createWindow () {
 
   mainWindow.loadFile('src/index.html')
 
-mainWindow.webContents.openDevTools()
+// mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)
@@ -47,7 +45,7 @@ function createAddWindow(file) {
         }
     })
 
-    addWindow.webContents.openDevTools()
+    // addWindow.webContents.openDevTools()
     addWindow.loadFile(file)
 }
 
