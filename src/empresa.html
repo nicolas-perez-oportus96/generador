@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Informacion de Empresa</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <form>
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+
+                <div class="medium-6 cell">
+                    <label>RUT Empresa:
+                        <input id="txtRutEmpresa" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>RUN Representante Tributario:
+                        <input id="txtRutRepresentante" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Codigo Actividad Economica Empresa:
+                        <input id="txtActEconom" type="number" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Ciudades de circulacion:
+                        <input id="txtCiudad" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Comuna
+                        <input id="txtComuna" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Cantidad de trabajadores:
+                        <input id="txtTrabajadores" type="text" id="number" placeholder="Ingresa tu clave secreta">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Cantidad de trabajadores Esenciales:
+                        <input id="txtTrabEs" type="text" id="number" placeholder="Ingresa tu clave secreta">
+                    </label>
+                </div>
+
+            </div>
+        </div>
+
+        <button id="btnDatos" class="button small">Guardar datos</button>
+    </form>
+
+    <script src="empresa.js"></script>
+</body>
+
+</html>

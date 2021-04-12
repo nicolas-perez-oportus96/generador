@@ -33,10 +33,10 @@ app.on('activate', () => {
 })
 
 //crear ventana
-function createAddWindow(file) {
+function createAddWindow(file, w, h) {
     addWindow = new BrowserWindow({
-        width: 400,
-        height: 300,
+        width: w,
+        height: h,
         autoHideMenuBar: true,
         resizable: false,
         modal: true,
@@ -45,7 +45,7 @@ function createAddWindow(file) {
         }
     })
 
-    // addWindow.webContents.openDevTools()
+    addWindow.webContents.openDevTools()
     addWindow.loadFile(file)
 }
 
@@ -78,7 +78,11 @@ Menu.setApplicationMenu(menu);
 
 //recibiendo eventos
 ipcMain.on('show-login', (event, arg) => {
-    createAddWindow('src/login.html');
+    createAddWindow('src/login.html', 400, 300);
+})
+
+ipcMain.on('show-info', (event, arg) => {
+  createAddWindow('src/empresa.html', 800, 600);
 })
 
 module.exports = {createAddWindow};

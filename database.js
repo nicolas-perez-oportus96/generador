@@ -5,9 +5,12 @@ const adapter = new FileSync('db.json')
 const db = low(adapter)
 
 // Set some defaults (required if your JSON file is empty)
-db.defaults({credenciales: {}}).write()
+db.defaults({ 
+    credenciales: {}, 
+    empresa:{} 
+}).write()
 
-function getDatosUsuario(usuario,contrasena){
+function getDatosUsuario(){
     const datos = db.get('credenciales').value();
     return datos;
 }
@@ -17,4 +20,18 @@ function postDatosUsuario(usuario,contrasena){
     db.set('credenciales.contrasena', contrasena).write();
 }
 
-module.exports = {getDatosUsuario, postDatosUsuario}
+function getDatosEmpresa(){
+    const datos = db.get('empresa').value();
+    return datos;
+}
+function postDatosEmpresa(datosEmpresa){
+    db.set('empresa', datosEmpresa).write();
+    // db.set('credenciales.contrasena', contrasena).write();
+}
+
+module.exports = {
+    getDatosUsuario, 
+    postDatosUsuario,
+    getDatosEmpresa,
+    postDatosEmpresa
+}
