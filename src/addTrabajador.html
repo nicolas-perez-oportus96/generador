@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar un trabajador</title>
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+    <!-- Compressed CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css"
+        integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <form>
+        <div class="grid-container">
+            <div class="grid-x grid-padding-x">
+
+                <div class="medium-6 cell">
+                    <label>Nombres:
+                        <input id="txtNombre" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Apellido Paterno:
+                        <input id="txtApellidoP" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Apellido Materno:
+                        <input id="txtApellidoM" type="text" id="rut" placeholder="12345678-9">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Tipo Documento:
+                        <select id="cbxTipoDocumento" type="text" id="number" placeholder="Si o No">
+                            <option value="1">Run</option>
+                            <option value="2">Pasaporte/DNI</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Pais
+                        <input id="txtPais" type="text" id="rut" placeholder="Pais de origen">
+                    </label>
+                </div>
+
+                <div class="medium-6 cell">
+                    <label>Numero Documento:
+                        <input id="txtNumDoc" type="text" id="number" placeholder="RUT/Pasaporte/DNI">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>DV:
+                        <input id="txtDV" type="text" id="number" placeholder="Digito Verificador">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Fecha Nacimiento:
+                        <input id="txtFecNacimiento" type="text" id="number" placeholder="01/01/2012">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Domicilio:
+                        <input id="txtDomi" type="text" id="number" placeholder="Direccion del trabajador">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Comuna:
+                        <input id="txtComuna" type="text" id="number" placeholder="Ingresa comuna de residencia">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Correo:
+                        <input id="txtEmail" type="text" id="number" placeholder="Ingresa correo del trabajador">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Genero:
+                        <input id="txtGenero" type="text" id="number" placeholder="M o F">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Patente:
+                        <input id="txtPatente" type="text" id="number" placeholder="Ej: ABCD23">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Funcion del trabajador:
+                        <input id="txtFuncion" type="text" id="number" placeholder="Escribe la funcion del trabajador">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>¿Es Esencial?:
+                        <select id="cbxEsen" type="text" id="number" placeholder="Si o No">
+                            <option value="1">Si</option>
+                            <option value="2">No</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>¿Viajes Interregionales?:
+                        <select id="cbxInter" type="text" id="number" placeholder="Si o No">
+                            <option value="1">Si</option>
+                            <option value="2">No</option>
+                        </select>
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Area en la que trabaja:
+                        <!-- <input id="txtArea" type="text" id="number" placeholder="Ingresa tu clave secreta"> -->
+                        <select id="cbxArea" type="text" id="number" placeholder="Seleccione area">
+                            <option value="1">Mantención de sistemas</option>
+                            <option value="2">Labores productivas</option>
+                            <option value="3">Labores operativas</option>
+                            <option value="4">Labores logísticas</option>
+                            <option value="5">Seguridad</option>
+                            <option value="6">Limpieza y sanitización</option>
+                        </select>
+                    </label>
+                </div>
+
+                <button id="btnGuardarTrabajador" class="button small">Guardar Trabajador</button>
+
+                <script src="addTrabajador.js"></script>
+
+            </div>
+        </div>
+    </form>
+
+    
+</body>
+
+</html>

@@ -85,4 +85,13 @@ ipcMain.on('show-info', (event, arg) => {
   createAddWindow('src/empresa.html', 800, 600);
 })
 
+ipcMain.on('show-trabajadores', (event, arg) => {
+  createAddWindow('src/trabajadores.html', 1000, 600);
+})
+
+ipcMain.on('show-addTrabajador', (event, arg) => {
+  createAddWindow('src/addTrabajador.html', 1000, 600);
+})
+
+
 module.exports = {createAddWindow};
