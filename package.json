@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/xlsx-populate": "git+https://github.com/JanLoebel/types-xlsx-populate.git",
     "electron": "11.2.1",
-    "lowdb": "^1.0.0"
+    "lowdb": "^1.0.0",
+    "xlsx-populate": "^1.21.0"
   }
 }

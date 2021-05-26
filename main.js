@@ -15,7 +15,7 @@ function createWindow () {
 
   mainWindow.loadFile('src/index.html')
 
-// mainWindow.webContents.openDevTools()
+mainWindow.webContents.openDevTools()
 }
 
 app.whenReady().then(createWindow)
@@ -45,7 +45,7 @@ function createAddWindow(file, w, h) {
         }
     })
 
-    addWindow.webContents.openDevTools()
+    //addWindow.webContents.openDevTools()
     addWindow.loadFile(file)
 }
 
